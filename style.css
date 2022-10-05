@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+html, body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #222;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 80%;
+}
+
+img {
+    width: 1.5em;
+}
+
+#wrapping {
+    border: 0.7em solid #cacaca;
+    border-right: 0.7em solid white;
+}
+
+#table {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-left: 0.5em solid #919191;
+    border-top: 0.5em solid #919191;
+    border-right: 0.5em solid white;
+    border-bottom: 0.5em solid white;
+}
+
+
+
+.table {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.one, .two, .three, .empty, .bomb {
+    width: 2em;
+    height: 2em;
+    border: dashed 1px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #cacaca;
+    border-bottom: none;
+}
+
+.one:first-of-type, .two:first-of-type, .three:first-of-type, .empty:first-of-type, .bomb:first-of-type {
+    border-left: none;
+}
+.one:last-of-type, .two:last-of-type, .three:last-of-type, .empty:last-of-type, .bomb:last-of-type {
+    border-right: none;
+}
+#first-row {
+    border-top: none;
+}
+#last-row {
+    border-bottom: none;
+}
+.row {
+    border: none;
+}
+
+.one {
+    color: #7200ff;
+}
+.two {
+    color: green;
+}
+.three {
+    color: red;
+}
+
+.hidden {
+    content: url(ressources/images/hidden.png);
+    border: dashed 1px rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+.hidden:hover {
+    content: none;
+    border: dashed 1px rgba(0, 0, 0, 1);
+}
+.hidden:last-of-type {
+    border-right: none;
+}
+.hidden:first-of-type {
+    border-left: none;
+}
+#last-row .hidden:hover {
+    border-bottom: none;
+}
